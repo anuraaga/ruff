@@ -1,5 +1,5 @@
 // auto-generated: "lalrpop 0.20.0"
-// sha3: 55b05a0e975c6960f495dd04b77b4bd27d82b3a94a0f7df3a9b5c03185d7625c
+// sha3: 2d0ff0bc0a91e0050aeaaae4364f5b6f981a110252ed2c7931b1237d74b80aa3
 use ruff_text_size::{Ranged, TextLen, TextRange, TextSize};
 use ruff_python_ast::{self as ast, Int, IpyEscapeKind};
 use super::{
@@ -36429,7 +36429,7 @@ fn __action220<
 {
     {
         let (source, is_raw, _) = fstring_middle;
-        Ok(parse_fstring_literal_element(source, is_raw, (location..end_location).into())?)
+        Ok(ast::FStringElement::Literal(parse_fstring_literal_element(source, is_raw, (location..end_location).into())?))
     }
 }
 
